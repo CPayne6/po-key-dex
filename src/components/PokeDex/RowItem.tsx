@@ -8,13 +8,16 @@ const ImageSkeleton = styled.div`
     width: 1em;
     height: 1em;
     background-color: lightgrey;
-    border-radius: 0.5px;
+    border-radius: 2px;
   }
 `;
 
 const TextSkeleton = styled.div<{ width: number }>`
   & {
     width: ${({ width }) => `${width}em`};
+    height: 1em;
+    background-color: lightgrey;
+    border-radius: 2px;
   }
 `;
 
@@ -77,7 +80,7 @@ export function RowItem({ preview, onSelect, selected }: RowItemProps) {
         <>
           <ImageSkeleton />
           <TextSkeleton width={5} />
-          <TextSkeleton width={15} />
+          <TextSkeleton width={10} />
         </>
       ) : (
         <>
